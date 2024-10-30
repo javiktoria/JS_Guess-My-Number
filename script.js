@@ -12,7 +12,7 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-const displayNumber = function (arg) {
+const displaySecretNumber = function (arg) {
   document.querySelector('.number').textContent = arg;
 };
 
@@ -40,7 +40,7 @@ document.querySelector('.check').addEventListener('click', function () {
   // When player wins
   else if (guess === secretNumber) {
     displayMessage('🎉 Correct number!');
-    displayNumber(secretNumber);
+    displaySecretNumber(secretNumber);
 
     setBackgroundColor('#60b347');
     setWidth('30rem');
@@ -70,7 +70,7 @@ document.querySelector('.again').addEventListener('click', function () {
 
   displayMessage('Start guessing...');
   displayScore(score);
-  displayNumber('?');
+  displaySecretNumber('?');
   document.querySelector('.guess').value = '';
 
   setBackgroundColor('#222');
